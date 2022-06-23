@@ -1,3 +1,5 @@
+from cgi import test
+from test_package.test_tshirt import test_tshirt
 
 def size(cms):
     if cms < 38:
@@ -7,9 +9,6 @@ def size(cms):
     else:
         return 'L'
 
-
-assert(size(37) == 'S')
-assert(size(38) == 'S')
-assert(size(40) == 'M')
-assert(size(43) == 'L')
+tshirt_tests = test_tshirt()
+tshirt_tests.test_tshirts_size_in_one_to_fifty_range(size)
 print("All is well (maybe!)\n")
