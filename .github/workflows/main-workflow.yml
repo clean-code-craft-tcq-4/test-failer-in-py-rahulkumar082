@@ -28,11 +28,11 @@ jobs:
         # exit-zero treats all errors as warnings.
         flake8 . --count --exit-zero --max-line-length=80 --ignore=E111,E121,E126 --statistics
     
-    - name: tshirts fail
-      run: bash .github/workflows/expectfail.sh python tshirts.py
+    - name: tshirts fix
+      run: bash .github/workflows/set_env.sh python test_package/test_tshirt.py
     
-    - name: misaligned fail
-      run: bash .github/workflows/expectfail.sh python misaligned.py
+    - name: misaligned fix
+      run: bash .github/workflows/set_env.sh python test_package/test_misaligned.py
 
-    - name: alerter fail
-      run: bash .github/workflows/expectfail.sh python alerter.py
+    - name: alerter fix
+      run: bash .github/workflows/set_env.sh python test_package/test_alerter.py
