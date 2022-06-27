@@ -1,5 +1,4 @@
 from tshirts import tshirts
-from tshirts import tshirts
 
 
 class test_tshirt():
